@@ -17,7 +17,7 @@ export default function Home(props) {
     const [favBut, setFavBut] = useState('Add To')
 
     let defaultTelAviv =() =>{ 
-     fetch(`http://dataservice.accuweather.com/currentconditions/v1/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
+     fetch(`https://dataservice.accuweather.com/currentconditions/v1/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
         })
     .then((response) => {
       if (response.ok) {
@@ -34,7 +34,7 @@ export default function Home(props) {
     return jsonObject;
     });
 
-     fetch(`http://dataservice.accuweather.com/forecasts/v1/daily/5day/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&metric=true`, {
+     fetch(`https://dataservice.accuweather.com/forecasts/v1/daily/5day/215854?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&metric=true`, {
         })
     .then((response) => {
     return response.json();

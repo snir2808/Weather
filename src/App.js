@@ -22,7 +22,7 @@ function App() {
     if(input.indexOf(' ') >= 0){
       let val = input.split(" ")
       console.log(`${input}`,val,inputVal)
-    fetch(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&q=${val[0]}%20${val[1]}`, {
+    fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&q=${val[0]}%20${val[1]}`, {
       })
       .then((response) => {
       return response.json();
@@ -35,7 +35,7 @@ function App() {
   } 
   else{
 
-  fetch(`http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&q=${inputVal}`, {
+  fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&q=${inputVal}`, {
     })
     .then((response) => {
     return response.json();
@@ -50,7 +50,7 @@ function App() {
   }, 1000);
   }
   let getInfoApi = (key,inputVal,input) => {
-    fetch(`http://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
+    fetch(`https://dataservice.accuweather.com/currentconditions/v1/${key}?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG`, {
     })
     .then((response) => {
       console.log(response)
