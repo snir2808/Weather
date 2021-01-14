@@ -14,7 +14,9 @@ function App() {
   // const [key, setKey] = useState ()
 
   let favDefTelAviv = (temp) => {
-    setFavArr([{disName:'tel aviv', name:'telaviv', temp: temp}])
+    let arr = favArr
+    arr[0].temp = temp
+    setFavArr(arr)
   }
 
   let addFav = (inputVal, input) =>{
