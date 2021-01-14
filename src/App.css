@@ -1,0 +1,32 @@
+body{
+  background-color: #81AAD9;
+}
+.App {
+  text-align: center;
+  width: 750px;
+  margin: 0 auto;
+  border-style: hidden;
+  box-shadow: 0px 0px 12px rgba(239,203,178,.75);
+  text-shadow: 0px 0px 5px rgba(239,203,178,.75);
+  border-radius: 15px;
+  margin-top: 61px;
+
+}
+
+.div_flex{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.p_day{
+  color: #d38450;
+  box-shadow: 0px 0px 12px rgba(239,203,178,.75);
+  text-shadow: 0px 0px 5px rgba(239,203,178,.75);
+  border-radius: 15px;
+  padding: 5px;
+}
+h3{
+  color: #d38450;
+  text-shadow: 0px 0px 5px rgba(239,203,178,.75);
+}
