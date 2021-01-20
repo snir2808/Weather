@@ -1,20 +1,20 @@
 import React, {useState} from 'react'
 import { HashRouter as Router, Switch, Route, Link} from "react-router-dom";
 import {useHistory} from 'react-router-dom';
-import Header from './component/Header'
-
-
-
 import './App.css';
 import Favorites from './component/Favorites';
 import Home from './component/Home';
-function App() {
-  const history = useHistory()
-  const [favArr,setFavArr] = useState([{disName:'tel aviv', name:'telaviv', temp:'25'}])
-  // const [key, setKey] = useState ()
 
-  let favDefTelAviv = (temp) => {
+
+
+function App() {
+
+  const history = useHistory()
+  const [favArr,setFavArr] = useState([{disName:'tel aviv', name:'telaviv', temp:'25',icon:1}])
+
+  let favDefTelAviv = (temp,icon) => {
     let arr = favArr
+    arr[0].icon = icon
     arr[0].temp = temp
     setFavArr(arr)
   }
@@ -23,7 +23,6 @@ function App() {
     var key
     if(input.indexOf(' ') >= 0){
       let val = input.split(" ")
-      console.log(`${input}`,val,inputVal)
     fetch(`https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey=OamihYj5o5ZcM4Apfg3ewaGUCTGWqUxG&q=${val[0]}%20${val[1]}`, {
       })
       .then((response) => {
@@ -60,8 +59,8 @@ function App() {
 
 })
     .then((jsonObject) => {
-      console.log(jsonObject)
-      setFavArr([...favArr,{disName: input, name:inputVal,temp:jsonObject[0].Temperature.Metric.Value}])
+      console.log(jsonObject[0].WeatherIcon)
+      setFavArr([...favArr,{disName: input, name:inputVal,temp:jsonObject[0].Temperature.Metric.Value, icon: jsonObject[0].WeatherIcon}])
       return jsonObject;
 });
   }
