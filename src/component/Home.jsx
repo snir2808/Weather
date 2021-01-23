@@ -294,7 +294,7 @@ export default function Home(props) {
     return (
         <div>
             <Header telAvivCallFunc = {telAvivFunc}/>
-            <Input onChange={checkFav} type="text"/><br/>
+            <Input onChange={checkFav} type="text" placeholder='   Write the name of a city'/><br/>
             <p>TelAviv<br/>{temp}C<br/><img src={icon}/></p>
             <Button onClick={addToList}>{favBut} Favorites</Button>
             <h3>{text}</h3>
@@ -428,15 +428,10 @@ export default function Home(props) {
                                     return( 
                                       <p className='p_day'>{dayName[index]}<br/>
                                       {item.dayTemp} C<br/>
-                                      <img src = {temporaryVariable[index].icon}/>
+                                      <img className='img' src = {temporaryVariable[index].icon}/>
                                       </p>
                                     )
               })}
-                {/* <p className='p_day'>{dayName[0]}<br/>{dayTemp[0]}C</p>
-                <p className='p_day'>{dayName[1]}<br/>{dayTemp[1]}C</p>
-                <p className='p_day'>{dayName[2]}<br/>{dayTemp[2]}C</p>
-                <p className='p_day'>{dayName[3]}<br/>{dayTemp[3]}C</p>
-                <p className='p_day'>{dayName[4]}<br/>{dayTemp[4]}C</p> */}
             </div>
         </div>
     )

@@ -42,7 +42,7 @@ import N43 from './../media/N43.png'
 import N44 from './../media/N44.png'
 
 export default function Favorites(props) {
-    const [style, setStyle] = useState({fontSize: '35px', color: 'black'})
+
     var icon = 0
     return (
         <div>
@@ -174,9 +174,9 @@ export default function Favorites(props) {
                 }
                 console.log(item.icon)
             if(item.disName == 'tel aviv'){
-                return <p style={style} className='p_day' >{item.disName}<br/>{item.temp}C<br/><img src={icon}/> </p>
+                return <p  className='p_day' >{item.disName}<br/>{item.temp}C<br/><img className='img' src={icon}/> </p>
             }else{
-                return <p className='p_day'>{item.disName}<br/>{item.temp}C<br/><img src={icon}/></p>
+                return <p className='p_day'>{item.disName}<br/>{item.temp}C<br/><img className='img' src={icon}/></p>
             }
            })}
         </div>

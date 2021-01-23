@@ -5,8 +5,9 @@ import Button from '@material-ui/core/Button';
 export default function Header(props) {
     return (
         <div>
-            <Link style={{textDecoration:'none'}} to ='/'><Button>home</Button></Link>
-            <Link style={{textDecoration:'none'}} to ='/Favorites'><Button onClick={props.telAvivCallFunc}>favorites</Button></Link>
+            <h1>Weather App</h1>
+            <Link style={{textDecoration:'none'}} to ='/'><Button className='border'>home</Button></Link>
+            <Link style={{textDecoration:'none'}} to ='/Favorites'><Button className='border' onClick={props.telAvivCallFunc}>favorites</Button></Link>
         </div>
     )
 }
